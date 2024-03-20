@@ -35,9 +35,9 @@ enum Theme: String, CaseIterable, Identifiable, Codable {
         Color(rawValue)
     }
     var name: String {
-           rawValue.capitalized
-       }
-       var id: String {
-           name
-       }
+        rawValue.capitalized
+    }
+    var id: String {
+        name
+    }
 }

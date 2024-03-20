@@ -13,8 +13,8 @@ struct History: Identifiable {
     var attendees: [DailyScrum.Attendee]
     
     init(id: UUID = UUID(), date: Date = Date(), attendees: [DailyScrum.Attendee]) {
-          self.id = id
-          self.date = date
-          self.attendees = attendees
-      }
+        self.id = id
+        self.date = date
+        self.attendees = attendees
+    }
 }

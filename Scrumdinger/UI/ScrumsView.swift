@@ -24,15 +24,15 @@ struct ScrumsView: View {
                     Button(action: {
                         isPresentingNewScrumView = true
                     }) {
-               
+                        
                         Image(systemName: "plus")
                     }
                 }.accessibilityLabel("New Scrum")
                 .sheet(isPresented: $isPresentingNewScrumView) {
                     NewScrumSheet(isPresentingNewScrumView: $isPresentingNewScrumView, scrums: $scrums)
-                        
+                    
                 }
-               
+            
         }
     }
 }

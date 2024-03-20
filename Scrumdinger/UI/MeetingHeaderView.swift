@@ -6,23 +6,23 @@
 //
 
 import SwiftUI
-    
+
 struct MeetingHeaderView: View {
     let secondsElapsed: Int
     let secondsRemaining: Int
     let theme: Theme
     
     private var totalSeconds: Int {
-          secondsElapsed + secondsRemaining
-      }
+        secondsElapsed + secondsRemaining
+    }
     
     private var progress: Double {
-           guard totalSeconds > 0 else { return 1 }
-           return Double(secondsElapsed) / Double(totalSeconds)
-       }
+        guard totalSeconds > 0 else { return 1 }
+        return Double(secondsElapsed) / Double(totalSeconds)
+    }
     private var minutesRemaining: Int {
-            secondsRemaining / 60
-        }
+        secondsRemaining / 60
+    }
     
     var body: some View {
         VStack {
@@ -43,11 +43,11 @@ struct MeetingHeaderView: View {
                 }
             }
         }
-            .accessibilityElement(children: .ignore)
-            .accessibilityLabel("Time remaining")
-            .accessibilityValue("\(minutesRemaining) minutes")
-            .padding([.top, .horizontal])
-        }
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("Time remaining")
+        .accessibilityValue("\(minutesRemaining) minutes")
+        .padding([.top, .horizontal])
+    }
 }
 
 #Preview {
